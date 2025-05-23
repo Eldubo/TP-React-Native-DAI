@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { Button, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function App() {
+import { Ionicons } from '@expo/vector-icons';
+
+//
+// Screens del Primer Stack
+//
+function ScreenA1() {
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME</Text>
+      ...
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+function ScreenA2() {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME 2</Text>
+      ...
+    </View>
+  );
+}
+
+// Screens del Primer Stack
+function ScreenB1() {...}
+function ScreenB2() {...}
+
+// Screens del Tercer Stack
+function ScreenC1() {...}
+function ScreenC2() {...}
+
+//
+// Creación de los stacks
+//
+const StackA = createNativeStackNavigator();
+const StackB = createNativeStackNavigator();
+const StackC = createNativeStackNavigator();
