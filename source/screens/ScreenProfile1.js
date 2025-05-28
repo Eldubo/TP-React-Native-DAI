@@ -8,7 +8,7 @@ export default function ScreenProfile1 () {
         </Image>
         <Text style={styles.text}>Susana</Text>
         <Text style={styles.text}>CABA</Text>
-        <Pressable style={styles.Pressable} onPress={}>
+        <Pressable style={styles.Pressable} onPress={() => navigation.navigate('ScreenProfile2')}>
         <Text>
             Editar Perfil
           </Text>

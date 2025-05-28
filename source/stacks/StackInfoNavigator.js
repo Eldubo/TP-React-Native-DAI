@@ -1,5 +1,5 @@
 import ScreenInfo1 from "../screens/ScreenInfo1";
-import ScreenInfo2 from "../screens/screenInfo2";
+import ScreenInfo2 from "../screens/ScreenInfo2";
 export default function StackInfoNavigator() {
     return (
       <StackInfo.Navigator>
