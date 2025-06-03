@@ -1,14 +1,18 @@
 import React from "react";
 import { View,Text,Image,Button, Pressable } from "react-native";
+import globalStyles from '../globalStyles';
+
+
 export default function ScreenProfile1 () {
     return (    
-        <View style={styles.homeScreen}>
-        <Image>
-        
-        </Image>
-        <Text style={styles.text}>Susana</Text>
-        <Text style={styles.text}>CABA</Text>
-        <Pressable style={styles.Pressable} onPress={() => navigation.navigate('ScreenProfile2')}>
+        <View style={globalStyles.homeScreen}>
+        <Image
+          source={assets/PerfilAvatar.jpg}
+          style={{width: 200, height: 200}}
+        /> 
+        <Text style={globalStyles.text}>Susana</Text>
+        <Text style={globalStyles.text}>CABA</Text>
+        <Pressable style={globalStyles.Pressable} onPress={() => navigation.navigate('ScreenProfile2')}>
         <Text>
             Editar Perfil
           </Text>

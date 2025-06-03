@@ -3,10 +3,18 @@ import {StyleSheet } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import StackHomeNavigator from "./source/stacks/StackHomeNavigator.js"
-import StackPlantasNavigator from "./source/stacks/StackPlantasNavigator.js"
-import StackInfoNavigator from "./source/stacks/StackInfoNavigator.js"
-import StackProfileNavigator from "./source/stacks/StackProfileNavigator.js"
+import {
+  ScreenHome1,
+  ScreenHome2,
+  ScreenInfo1,
+  ScreenInfo2,
+  ScreenPlantas1,
+  ScreenPlantas2,
+  ScreenProfile1,
+  ScreenProfile2
+} from "./source/screens";
+
+
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -20,6 +28,43 @@ const StackInfo = createNativeStackNavigator();
 const StackProfile = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
+
+function StackHomeNavigator() {
+  return (
+    <StackHome.Navigator>
+      <StackHome.Screen name="ScreenHome1" component={ScreenHome1} />
+      <StackHome.Screen name="ScreenHome2" component={ScreenHome2} />
+    </StackHome.Navigator>
+  );
+}
+
+function StackInfoNavigator() {
+    return (
+      <StackInfo.Navigator>
+        <StackInfo.Screen name="ScreenInfo1" component={ScreenInfo1} />
+        <StackInfo.Screen name="ScreenInfo1" component={ScreenInfo2} />
+      </StackInfo.Navigator>
+    );
+  }
+
+  function StackPlantasNavigator() {
+    return (
+      <StackPlantas.Navigator>
+        <StackPlantas.Screen name="ScreenA1" component={ScreenPlantas1} />
+        <StackPlantas.Screen name="ScreenA2" component={ScreenPlantas2} />
+      </StackPlantas.Navigator>
+    );
+  }
+  
+  function StackProfileNavigator() {
+      return (
+        <StackProfile.Navigator>
+          <StackProfile.Screen name="ScreenProfile1" component={ScreenProfile1} />
+          <StackProfile.Screen name="ScreenProfile2" component={ScreenProfile2} />
+        </StackProfile.Navigator>
+      );
+    }
+
 
 
 export default function App() {
@@ -46,6 +91,8 @@ export default function App() {
   );
 }
 
+/*
+Se importa el estilo dese la hoja de estilos gral
 
 const styles = StyleSheet.create({
   container: {
@@ -63,3 +110,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   }
 });
+*/
