@@ -42,7 +42,7 @@ function StackInfoNavigator() {
     return (
       <StackInfo.Navigator>
         <StackInfo.Screen name="ScreenInfo1" component={ScreenInfo1} />
-        <StackInfo.Screen name="ScreenInfo1" component={ScreenInfo2} />
+        <StackInfo.Screen name="ScreenInfo2" component={ScreenInfo2} />
       </StackInfo.Navigator>
     );
   }
@@ -50,8 +50,8 @@ function StackInfoNavigator() {
   function StackPlantasNavigator() {
     return (
       <StackPlantas.Navigator>
-        <StackPlantas.Screen name="ScreenA1" component={ScreenPlantas1} />
-        <StackPlantas.Screen name="ScreenA2" component={ScreenPlantas2} />
+        <StackPlantas.Screen name="ScreenPlantas1" component={ScreenPlantas1} />
+        <StackPlantas.Screen name="ScreenPlantas2" component={ScreenPlantas2} />
       </StackPlantas.Navigator>
     );
   }

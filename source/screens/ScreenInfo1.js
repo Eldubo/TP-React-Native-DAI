@@ -1,8 +1,8 @@
 import React from "react";
 import { View,Text,Image, Pressable } from "react-native";
 import globalStyles from '../globalStyles';
-
-
+import { useNavigation } from '@react-navigation/native';
+import frutillas from '../../assets/FrutillasPlanta.jpeg';
 export default function ScreenInfo1() {
     const navigation = useNavigation();
     let array = [];
@@ -10,7 +10,7 @@ export default function ScreenInfo1() {
       <View style={globalStyles.homeScreen}>
         <Text style={globalStyles.text}>Info</Text>
          <Image
-                  source={assets/FrutillasPlanta.jpeg}
+                  source={frutillas}
                   style={{width: 200, height: 200}}
                 /> 
         

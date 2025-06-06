@@ -1,13 +1,14 @@
 import React from "react";
 import { View,Text,Image,Button, Pressable } from "react-native";
 import globalStyles from '../globalStyles';
-
-
+import Perfil from '../../assets/PerfilAvatar.jpg';
+import { useNavigation } from '@react-navigation/native';
 export default function ScreenProfile1 () {
+  const navigation = useNavigation();
     return (    
         <View style={globalStyles.homeScreen}>
         <Image
-          source={assets/PerfilAvatar.jpg}
+          source={Perfil}
           style={{width: 200, height: 200}}
         /> 
         <Text style={globalStyles.text}>Susana</Text>

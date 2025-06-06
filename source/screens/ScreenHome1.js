@@ -2,7 +2,7 @@ import React from "react";
 import { View,Text,Image, Pressable } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import globalStyles from '../globalStyles';
-
+import logo from '../../assets/logo.png';
 export default function ScreenHome1 () {
     const navigation = useNavigation();
 
@@ -10,7 +10,7 @@ export default function ScreenHome1 () {
         <>
     <View>
      <Image
-          source={assets/logo.png}
+          source={logo}
           style={{width: 200, height: 200}}
         />
 
