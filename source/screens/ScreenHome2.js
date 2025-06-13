@@ -18,14 +18,6 @@ export default function ScreenHome2() {
       <Text style={globalStyles.text}>
         Esta es una pantalla secundaria del inicio. Aquí podés mostrar noticias, consejos, o accesos rápidos a funciones específicas.
       </Text>
-
-      <TouchableOpacity
-        style={globalStyles.button}
-        onPress={() => navigation.navigate("ScreenInfo1")}
-      >
-        <Text style={globalStyles.buttonText}>Ir a Info 1</Text>
-      </TouchableOpacity>
-
       <TouchableOpacity
         style={globalStyles.button}
         onPress={() => navigation.goBack()}

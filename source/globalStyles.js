@@ -8,7 +8,7 @@ const globalStyles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   text: {
-    fontSize: 20,
+    fontSize: 30,
     color: 'black',
   },
   homeScreen: {

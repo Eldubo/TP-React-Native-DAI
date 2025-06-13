@@ -13,7 +13,7 @@ export default function ScreenProfile2 () {
         <Pressable style={globalStyles.button}><Text>Cambiar Imagen</Text></Pressable>
         <TextInput style={globalStyles.input} placeholder= "direccion" ></TextInput>
         <TextInput style={globalStyles.input} placeholder= "Numero" keyboardType = 'phone-pad'></TextInput>
-        <Pressable style={globalStyles.button}><Text>Confirmar</Text></Pressable>
+        <Pressable style={globalStyles.button} onPress={() => navigation.goBack()}><Text>Confirmar</Text></Pressable>
       </View>
     )
 }

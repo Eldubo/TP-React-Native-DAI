@@ -3,22 +3,23 @@ import { View,Text,Image, Pressable } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import globalStyles from '../globalStyles';
 import logo from '../../assets/logo.png';
+import { ScrollView } from "react-native-gesture-handler";
 export default function ScreenHome1 () {
     const navigation = useNavigation();
 
     return (
         <>
-    <View>
+    <ScrollView style={globalStyles .homeScreen}>
      <Image
           source={logo}
-          style={{width: 200, height: 200}}
+          style={{width: 200, height: 200, paddingBottom: 30}}
         />
 
       <Text style={globalStyles.text}>Bienvenido al hogar de los jardineros</Text>
       <Pressable onPress={() => navigation.navigate('ScreenHome2')}>
         <Text>Comenzar</Text>
       </Pressable>
-    </View>
+    </ScrollView >
     </>
   );
 }
