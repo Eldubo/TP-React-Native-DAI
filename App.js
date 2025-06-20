@@ -1,8 +1,9 @@
 import * as React from 'react';
 import {StyleSheet } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
   ScreenHome1,
   ScreenHome2,
@@ -19,7 +20,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 
 //
-// Screens del Primer Stack
+// Stacks
 //
 
 const StackHome = createNativeStackNavigator();
@@ -69,6 +70,7 @@ function StackInfoNavigator() {
 
 export default function App() {
   return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
     <NavigationContainer>
       <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -88,26 +90,6 @@ export default function App() {
       </Tab.Navigator>
 
     </NavigationContainer>
+    </GestureHandlerRootView>
   );
 }
-
-/*
-Se importa el estilo dese la hoja de estilos gral
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    color: 'white',
-    fontSize: 20,
-  },
-  homeScreen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
-});
-*/

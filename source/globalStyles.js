@@ -20,4 +20,4 @@ const globalStyles = StyleSheet.create({
 
 export default globalStyles;
 
-//Se puede usar en todas las screens
+//estilo para todas las screens

@@ -4,6 +4,7 @@ import globalStyles from '../globalStyles';
 import Perfil from '../../assets/PerfilAvatar.jpg';
 import { useNavigation } from '@react-navigation/native';
 export default function ScreenProfile2 () {
+   const navigation = useNavigation();
     return (
         <View style={globalStyles.homeScreen}>
         <Image

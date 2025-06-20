@@ -9,7 +9,7 @@ export default function ScreenHome1 () {
 
     return (
         <>
-    <ScrollView style={globalStyles .homeScreen}>
+    <ScrollView contentContainerStyle={globalStyles.homeScreen}>
      <Image
           source={logo}
           style={{width: 200, height: 200, paddingBottom: 30}}
